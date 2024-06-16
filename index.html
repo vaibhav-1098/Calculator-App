@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+        --primaryColour: steelblue;
+        }
+        body{
+            background-color: var(--primaryColour);
+        }
+        section{
+            height: 93vh;
+            width: 100vw;
+            background-color: var(--primaryColour);
+        }
+        table,tr,td{
+            border-collapse: collapse;
+            border: 5px solid var(--primaryColour);
+        }
+        td{
+            width: 25%;
+            cursor: pointer;
+            font-size: 2.5rem;
+        }
+        .N,#backBtn{
+            background-color: #312B1B;
+        }
+        .S{
+            background-color: #6f612f;
+        }
+        #inputField{
+            background-color: var(--primaryColour);
+            color: aliceblue;
+            border: 1px solid aqua;
+            border-radius: 5px;
+        }
+        #outputField{
+            border-left: 8px solid var(--primaryColour);
+            border-right: 8px solid var(--primaryColour);
+            border-bottom: 3px solid var(--primaryColour);
+            background: linear-gradient(skyblue, aquamarine);
+        }
+        .N,#backBtn,.S,#clearBtn,#evalBtn{
+            color: aliceblue;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            border-radius: 10px;
+            &:hover{background-color: #757575;}
+        }
+        #backBtn{
+            font-size: 2rem;
+        }
+        #clearBtn{
+            background-color: rgb(194, 0, 39);
+            font-size: 2rem;
+            &:hover{background-color: #ff2c56;}
+        }
+        #evalBtn{
+            background-color: #367140;
+            &:hover{background-color: #008e47;}
+        }
+    </style>
+    <style>
+        @media screen and (min-width: 650px) {
+            section{
+                width: 50vw;
+                height: 100vh;
+            }
+        }
+    </style>
+</head><body>
+<!-- START -->
+
+
+<section class="flex justify-end flex-col mx-auto">
+
+<div id="inputField" class="m-2 p-2 text-2xl h-36 overflow-y-auto">
+</div>
+    
+<div id="outputField" class="w-full p-1 px-2 text-3xl h-28 text-right">
+</div>
+
+<table class="w-full text-center flex-1">
+    <tr>
+        <td class="S" colspan="2" id="clearBtn">AC</td>
+        <td class="S button">^</td>
+        <td class="S button">÷</td>
+    </tr>
+    <tr>
+        <td class="N button">7</td>
+        <td class="N button">8</td>
+        <td class="N button">9</td>
+        <td class="S button">×</td>
+    </tr>
+    <tr>
+        <td class="N button">4</td>
+        <td class="N button">5</td>
+        <td class="N button">6</td>
+        <td class="S button">-</td>
+    </tr>
+    <tr>
+        <td class="N button">1</td>
+        <td class="N button">2</td>
+        <td class="N button">3</td>
+        <td class="S button">+</td>
+    </tr>
+    <tr>
+        <td class="N button">0</td>
+        <td class="N font-semibold button">.</td>
+        <td id="backBtn"><i class="fa-solid fa-delete-left"></i></td>
+        <td id="evalBtn" rowspan="2"><i class="fa-solid fa-equals"></i></td>
+    </tr>
+    <tr>
+        <td class="N button">(</td>
+        <td class="N button">)</td>
+        <td class="N button">00</td>
+    </tr>
+</table>
+</section>
+
+
+<!-- END -->
+<script src="script.js"></script>
+</body></html>
